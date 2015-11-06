@@ -1,6 +1,6 @@
 {
   "name": "npm-arduino-avr-gcc",
-  "version": "4.8.1-arduino3",
+  "version": "4.8.1-arduino5",
   "description": "Installs Arduino's avr-gcc toolchain via npm.",
   "main": "./index.js",
   "author": "Paulo Barcelos",
