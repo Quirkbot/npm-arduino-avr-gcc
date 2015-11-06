@@ -1,5 +1,6 @@
 node_modules
 lib/binding
+tools
 build
 test
 *.tgz

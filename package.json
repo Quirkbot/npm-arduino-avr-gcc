@@ -1,27 +1,29 @@
 {
-    "name" : "npm-arduino-avr-gcc",
-    "version" : "4.8.1-arduino2",
-    "description" :"Installs Arduino's avr-gcc toolchain via npm.",
-    "main" : "./index.js",
-    "author" : "Paulo Barcelos",
-    "repository"   :  {
-       "type" : "git",
-       "url"  : "git://github.com/Quirkbot/npm-arduino-avr-gcc.git"
-    },
-    "binary": {
-        "module_name" : "avr-gcc",
-        "module_path" : "./lib/binding/",
-        "remote_path" : "./npm-arduino/",
-        "package_name": "{name}-{vesion}-{prerelease}-{platform}-{arch}.tar.bz",
-        "host"        : "https://s3.amazonaws.com"
-    },
-    "dependencies"  : {
-      "node-pre-gyp": "0.5.x"
-    },
-    "bundledDependencies":["node-pre-gyp"],
-    "scripts": {
-        "install" : "node-pre-gyp install",
-        "test": "node index.js",
-        "prepublish": "npm ls"
-    }
+  "name": "npm-arduino-avr-gcc",
+  "version": "4.8.1-arduino2",
+  "description": "Installs Arduino's avr-gcc toolchain via npm.",
+  "main": "./index.js",
+  "author": "Paulo Barcelos",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Quirkbot/npm-arduino-avr-gcc.git"
+  },
+  "binary": {
+    "module_name": "avr_gcc",
+    "module_path": "./tools/",
+    "remote_path": "./npm-arduino/",
+    "package_name": "{module_name}-{version}-{platform}-{arch}.tar.bz",
+    "host": "https://s3.amazonaws.com"
+  },
+  "dependencies": {
+    "node-pre-gyp": "^0.6.15"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
+  "scripts": {
+    "install": "node-pre-gyp install",
+    "test": "node index.js",
+    "prepublish": "npm ls"
+  }
 }
